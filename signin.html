@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sign in | Offerpedia</title>
+  <meta name="description" content="Sign in to your Offerpedia store dashboard.">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Nunito:600,700,800" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body class="app">
+<div class="auth-wrap">
+  <aside class="auth-aside">
+    <a href="index.html"><img src="assets/logo.png" alt="Offerpedia" width="150"></a>
+    <div>
+      <div class="tag">Your store, orders and customers — <span>all in one place.</span></div>
+      <div class="proof">
+        <div><i class="bi bi-whatsapp"></i> Instant order notifications on WhatsApp</div>
+        <div><i class="bi bi-graph-up-arrow"></i> Live sales and delivery tracking</div>
+        <div><i class="bi bi-shield-lock"></i> Encrypted sessions, protected sign-in</div>
+      </div>
+    </div>
+    <div class="live-chip"><span class="dot"></span> All systems operational</div>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <a class="back-home" href="index.html"><i class="bi bi-arrow-left"></i> Back to website</a>
+      <h2 id="title" style="margin-top:18px">Welcome back</h2>
+      <p class="sub" id="subtitle">Sign in to manage your store.</p>
+
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-in" aria-selected="true">Sign in</button>
+        <button type="button" role="tab" id="tab-up" aria-selected="false">Create account</button>
+      </div>
+
+      <div id="alert" class="alert" role="alert"></div>
+
+      <!-- Sign in -->
+      <form id="form-in" novalidate>
+        <div class="field" id="f-email">
+          <label for="email">Email</label>
+          <div class="input-wrap"><i class="bi bi-envelope lead"></i>
+            <input id="email" type="email" autocomplete="username" placeholder="you@store.com" required></div>
+          <div class="err"></div>
+        </div>
+        <div class="field" id="f-password">
+          <label for="password">Password</label>
+          <div class="input-wrap"><i class="bi bi-lock lead"></i>
+            <input id="password" type="password" autocomplete="current-password" placeholder="Your password" required>
+            <button type="button" class="eye" aria-label="Show password"><i class="bi bi-eye"></i></button></div>
+          <div class="err"></div>
+        </div>
+        <div class="row-between">
+          <label class="check"><input type="checkbox" id="remember"> Keep me signed in</label>
+          <a href="#" id="forgot">Forgot password?</a>
+        </div>
+        <button class="btn-primary" id="submit-in" type="submit"><span class="spinner"></span><span class="lbl">Sign in</span></button>
+        <div class="demo-hint">
+          Try the demo store: <strong>demo@offerpedia.org</strong> / <strong>Offerpedia@123</strong>
+          &nbsp;<button type="button" id="fill-demo">Fill it in</button>
+        </div>
+      </form>
+
+      <!-- Sign up -->
+      <form id="form-up" class="hidden" novalidate>
+        <div class="field" id="g-name"><label for="r-name">Your name</label>
+          <input id="r-name" class="plain" type="text" autocomplete="name" placeholder="Full name"><div class="err"></div></div>
+        <div class="field" id="g-store"><label for="r-store">Store name <span style="font-weight:400">(optional)</span></label>
+          <input id="r-store" class="plain" type="text" placeholder="e.g. Al Noor Boutique"><div class="err"></div></div>
+        <div class="field" id="g-email"><label for="r-email">Email</label>
+          <input id="r-email" class="plain" type="email" autocomplete="email" placeholder="you@store.com"><div class="err"></div></div>
+        <div class="field" id="g-password"><label for="r-password">Password</label>
+          <input id="r-password" class="plain" type="password" autocomplete="new-password" placeholder="At least 8 characters">
+          <div class="strength"><i id="strength-bar"></i></div><div class="err"></div></div>
+        <button class="btn-primary" id="submit-up" type="submit"><span class="spinner"></span><span class="lbl">Create my store</span></button>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/signin.js"></script>
+</body>
+</html>

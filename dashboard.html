@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Dashboard | Offerpedia</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Nunito:600,700,800" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body class="app">
+<div class="splash" id="splash"><span class="spinner"></span></div>
+<div class="shell">
+  <aside class="side" id="side">
+    <img src="assets/logo.png" alt="Offerpedia">
+    <nav id="nav">
+      <button data-view="overview" class="active"><i class="bi bi-grid"></i> Overview</button>
+      <button data-view="orders"><i class="bi bi-bag"></i> Orders <span class="badge hidden" id="badge-orders">0</span></button>
+      <button data-view="products"><i class="bi bi-box-seam"></i> Products</button>
+      <button data-view="customers"><i class="bi bi-people"></i> Customers</button>
+      <button data-view="campaigns"><i class="bi bi-megaphone"></i> Campaigns</button>
+      <button data-view="settings"><i class="bi bi-gear"></i> Settings</button>
+    </nav>
+    <div class="bottom">
+      <div class="live-chip" style="margin-bottom:10px"><span class="dot"></span> Live</div>
+      <div class="netlog" id="netlog">api ready</div>
+      <button class="btn-sm" id="logout" style="margin-top:12px;width:100%"><i class="bi bi-box-arrow-right"></i> Sign out</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="menu-btn" id="menu" aria-label="Menu"><i class="bi bi-list"></i></button>
+        <h1 id="page-title">Overview</h1>
+      </div>
+      <div class="who"><div style="text-align:right"><div id="who-name" style="font-weight:700"></div><div id="who-store" class="netlog"></div></div><div class="avatar" id="avatar"></div></div>
+    </div>
+    <div id="view"></div>
+  </main>
+</div>
+<div class="toasts" id="toasts"></div>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>
